@@ -1,0 +1,46 @@
+{
+  "passwords": [
+    {
+      "id": "1",
+      "category": "work",
+      "app": "outlook",
+      "userName": "testuser@mytest.com",
+      "encryptedPassword": "aGVoZWhlaA=="
+    },
+    {
+      "id": "2",
+      "category": "school",
+      "app": "messenger",
+      "userName": "testuser@mytest.com",
+      "encryptedPassword": "TmV3UGFzc3dvcmRAMTIz"
+    },
+    {
+      "id": 0,
+      "category": "dasd",
+      "app": "dasd",
+      "userName": "123",
+      "encryptedPassword": "NTU="
+    },
+    {
+      "id": 0,
+      "category": "1234e",
+      "app": "edqw",
+      "userName": "dqw",
+      "encryptedPassword": "MzEy"
+    },
+    {
+      "id": "6cfe",
+      "category": "eqw",
+      "app": "ecas",
+      "userName": "we12",
+      "encryptedPassword": "Y2FzYw=="
+    },
+    {
+      "id": "c66e",
+      "category": "csadc",
+      "app": "casdc",
+      "userName": "acsd",
+      "encryptedPassword": "Y2FzZGM="
+    }
+  ]
+}
