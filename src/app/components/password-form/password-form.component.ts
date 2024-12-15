@@ -13,6 +13,7 @@ import { CommonModule } from "@angular/common";
 export class PasswordFormComponent implements OnInit {
     isEditMode = false;
     passwordItem: PasswordItem = {
+        id: undefined,
         category: "",
         app: "",
         userName: "",

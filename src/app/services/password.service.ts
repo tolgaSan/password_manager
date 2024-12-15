@@ -17,7 +17,17 @@ export class PasswordService {
     //api url to the database server
     private apiURL = 'http://localhost:3000/passwords';
 
-    constructor(private http: HttpClient) { }
+    private highestId = 2;
+
+    constructor(private http: HttpClient) { 
+        this.initializeHighestId();
+    }
+
+    private initializeHighestId() {
+        this.getAll().subscribe(items => {
+            this.highestId = items.reduce((max, item) => Math.max(max, item.id || 0), 0);
+        });
+    }
 
     //returns all items
     getAll(): Observable<PasswordItem[]> {
@@ -31,11 +41,13 @@ export class PasswordService {
 
     //add a new item with the structure of PasswordItem (id, category, app, userName, encryptedPassword)
     create(item: PasswordItem): Observable<PasswordItem> {
+        item.id = ++this.highestId;
         return this.http.post<PasswordItem>(this.apiURL, item);
     }
 
     //updates an item by id
     update(id: number, item: PasswordItem): Observable<PasswordItem> {
+        item.id = ++this.highestId;
         return this.http.put<PasswordItem>(`${this.apiURL}/${id}`, item);
     }
 

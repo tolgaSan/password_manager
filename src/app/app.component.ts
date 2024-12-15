@@ -15,8 +15,6 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   goToList() {
-    // Navigiert zur Liste, falls die Route '' => PasswordListComponent ist
-    // oder passe den Pfad an deine Routen-Konfiguration an, z. B. '/list'
     this.router.navigate(['/list']);
   }
 }
